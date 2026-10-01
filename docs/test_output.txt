@@ -1,0 +1,61 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Entitlement.Domain -> C:\Users\Manas\Downloads\Total Job Application process flow\projects\entitlement-certification-sod\src\Entitlement.Domain\bin\Debug\net8.0\Entitlement.Domain.dll
+  Entitlement.Api -> C:\Users\Manas\Downloads\Total Job Application process flow\projects\entitlement-certification-sod\src\Entitlement.Api\bin\Debug\net8.0\Entitlement.Api.dll
+  Entitlement.Tests -> C:\Users\Manas\Downloads\Total Job Application process flow\projects\entitlement-certification-sod\tests\Entitlement.Tests\bin\Debug\net8.0\Entitlement.Tests.dll
+Test run for C:\Users\Manas\Downloads\Total Job Application process flow\projects\entitlement-certification-sod\tests\Entitlement.Tests\bin\Debug\net8.0\Entitlement.Tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.30)
+[xUnit.net 00:00:00.05]   Discovering: Entitlement.Tests
+[xUnit.net 00:00:00.07]   Discovered:  Entitlement.Tests
+[xUnit.net 00:00:00.07]   Starting:    Entitlement.Tests
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.ValidateAttempt_ValidReviewerAndReason_Succeeds [2 ms]
+  Passed Entitlement.Tests.Log.AppendOnlyGrantLogTests.Entries_ReflectsAppendOrder [3 ms]
+  Passed Entitlement.Tests.Rules.SodRuleCatalogTests.TradeInstructionRule_IsTheNamedCreateAndApproveScenario [3 ms]
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.CertificationService_EmptyReason_NeverCreatesADecision [1 ms]
+  Passed Entitlement.Tests.Engine.EntitlementSnapshotBuilderTests.Build_UserTerminatedWithoutRevoke_UserInactiveButGrantStillActive [5 ms]
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.ValidateAttempt_BlankReviewer_IsRejected [< 1 ms]
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.ValidateAttempt_AlreadyCertified_IsRejected [< 1 ms]
+  Passed Entitlement.Tests.Engine.EntitlementSnapshotBuilderTests.Build_ReOnboardAfterTermination_UserActiveAgain [< 1 ms]
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.ValidateAttempt_BlankReason_IsRejected [< 1 ms]
+  Passed Entitlement.Tests.Rules.SodRuleCatalogTests.AllRules_ContainsExactlyThreeNamedRules [2 ms]
+  Passed Entitlement.Tests.Engine.EntitlementSnapshotBuilderTests.Build_GrantThenNothingElse_GrantIsActive [< 1 ms]
+  Passed Entitlement.Tests.Engine.EntitlementSnapshotBuilderTests.Build_RoleDeletedWithoutRevoke_RoleGoneButGrantStillActive [< 1 ms]
+  Passed Entitlement.Tests.Engine.EntitlementSnapshotBuilderTests.Build_GrantThenRevoke_GrantIsNotActive [< 1 ms]
+  Passed Entitlement.Tests.Log.AppendOnlyGrantLogTests.PriorEntriesDigest_DiffersWhenEntryContentWouldDiffer [2 ms]
+  Passed Entitlement.Tests.Rules.SodRuleCatalogTests.NoBusinessRole_IndividuallyGrantsBothSidesOfAnySodRule [< 1 ms]
+  Passed Entitlement.Tests.Certification.CertificationGuardTests.CertificationService_SecondAttemptOnSameFinding_IsRejected [1 ms]
+  Passed Entitlement.Tests.Log.AppendOnlyGrantLogTests.PriorEntriesDigest_UnchangedAfterAppend_ProvesLogIsAppendOnly [< 1 ms]
+  Passed Entitlement.Tests.Log.AppendOnlyGrantLogTests.Append_AssignsSequentialSequenceNumbers [1 ms]
+  Passed Entitlement.Tests.Log.AppendOnlyGrantLogTests.PriorEntriesDigest_RejectsOutOfRangeCount [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.UserWithCreateAndApproveTradeInSameScope_IsFlaggedAsSod01 [11 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.GrantForTerminatedUser_IsFlaggedAsOrphanedTerminatedUser [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.GrantForDeletedRole_IsFlaggedAsOrphanedDeletedRole [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.CleanPopulation_RaisesNoFindings [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.UserWithCreateAndApproveTradeInDifferentScopes_IsNotFlagged [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.TwoUsersEachHoldingOneSide_IsNotFlagged [< 1 ms]
+  Passed Entitlement.Tests.Detection.FastConflictDetectorTests.WireAndSecurityMasterMakerCheckerConflicts_AreAlsoCaught [< 1 ms]
+  Passed Entitlement.Tests.Reporting.EvidencePackGeneratorTests.Generate_TwiceOverSameLog_IsByteIdentical [14 ms]
+  Passed Entitlement.Tests.Synthetic.SyntheticPopulationGeneratorTests.Generate_ProducesExactlyTheTargetGrantCount [17 ms]
+  Passed Entitlement.Tests.Reporting.EvidencePackGeneratorTests.Generate_ListsEveryFinding_AndReportsActiveGrantCount [6 ms]
+  Passed Entitlement.Tests.Reporting.EvidencePackGeneratorTests.Generate_AfterANewAppend_ProducesADifferentPack [< 1 ms]
+  Passed Entitlement.Tests.Synthetic.SyntheticPopulationGeneratorTests.Generate_ProducesExactlyTwentyEightSeededDefects [5 ms]
+  Passed Entitlement.Tests.Synthetic.SyntheticPopulationGeneratorTests.Generate_IsDeterministic_SameSeedProducesSameLogLength [14 ms]
+  Passed Entitlement.Tests.Synthetic.SyntheticPopulationGeneratorTests.Generate_FastDetectorCatchesAllSeededDefectsWithZeroFalsePositives [12 ms]
+  Passed Entitlement.Tests.Api.ApiIntegrationTests.GetCampaignSummary_ReturnsFourThousandGrantsAndTwentyEightFindings [457 ms]
+  Passed Entitlement.Tests.Api.ApiIntegrationTests.PostCertification_ValidReasonThenRepeat_SecondAttemptRejected [16 ms]
+  Passed Entitlement.Tests.Api.ApiIntegrationTests.PostCertification_BlankReason_ReturnsUnprocessable [4 ms]
+  Passed Entitlement.Tests.Api.ApiIntegrationTests.GetEvidencePack_IsByteIdenticalAcrossTwoRequests [8 ms]
+[xUnit.net 00:00:01.48]   Finished:    Entitlement.Tests
+  Passed Entitlement.Tests.Api.ApiIntegrationTests.PersistGrantLog_ThenCount_RoundTripsThroughEfCoreSqlite [453 ms]
+  Passed Entitlement.Tests.Detection.ReferenceOracleAgreementTests.Oracle_AgreesWithFastDetector_OverFullSyntheticPopulation [1 s]
+  Passed Entitlement.Tests.Detection.ReferenceOracleAgreementTests.Oracle_AgreesWithFastDetector_OnNamedTradeInstructionConflict [< 1 ms]
+  Passed Entitlement.Tests.Detection.ReferenceOracleAgreementTests.Oracle_AgreesWithFastDetector_OnMixedCleanAndOrphanScenario [< 1 ms]
+
+Test Run Successful.
+Total tests: 41
+     Passed: 41
+ Total time: 1.7791 Seconds

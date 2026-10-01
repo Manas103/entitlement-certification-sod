@@ -1,0 +1,49 @@
+Entitlement Certification Service with Segregation-of-Duties Detection - measurement run
+Run started (UTC): 2026-10-01T23:52:46.1088524Z
+Machine: 16 logical cores, OS Microsoft Windows 10.0.26200, .NET 8.0.30
+
+Generated synthetic population: 4000 active user-role grants, 28 seeded defects (12 SOD-01, 5 SOD-02, 3 SOD-03, 4 orphan-user, 4 orphan-role) in 16 ms.
+
+--- Quarterly access-review campaign: fast/indexed detector over full population ---
+Active user-role grants reviewed: 4000
+Detection wall time: 9 ms
+Findings raised: 28
+
+--- Seeded defect catch rate ---
+Seeded defects: 28
+Caught by fast detector: 28 / 28
+False positives (findings raised that were not seeded): 0 over 4000 user-role pairs reviewed
+
+--- Named SoD scenario: a user able to both create and approve a trade instruction ---
+Caught: finding SOD|SOD-01|U-SOD-0001|Derivatives|Equity - User U-SOD-0001 holds both CreateTradeInstruction and ApproveTradeInstruction within Derivatives/Equity scope (Trade instruction maker-checker).
+Total SOD-01 (trade instruction maker-checker) findings: 12
+
+--- Reference oracle diff (brute-force O(users x scopes x grants), full population) ---
+Oracle wall time: 1234 ms
+Oracle findings: 28
+Fast findings: 28
+Findings only in fast detector: 0
+Findings only in oracle: 0
+Exact match: True
+
+--- Reviewer evidence pack byte-identity (two independent regenerations from the same append-only log) ---
+Pack size: 7129 chars
+Run 1 SHA-256: 1B59AFE6A56BE57AB209A55164183722BD3EF6AA69CB8C995AACD7AD7F690F4A
+Run 2 SHA-256: 1B59AFE6A56BE57AB209A55164183722BD3EF6AA69CB8C995AACD7AD7F690F4A
+Byte-identical: True
+
+--- Append-only grant log invariant ---
+Entries before demo append: 5345
+Entries after demo append: 5346
+Digest of first 5345 entries, before append:  7287DB6859D45D23AFFE12751FC7CF1368B95EAEF0FEF56E436FB3CC37E73DF0
+Digest of first 5345 entries, after append:   7287DB6859D45D23AFFE12751FC7CF1368B95EAEF0FEF56E436FB3CC37E73DF0
+Prior entries unchanged by append: True
+
+=== Measured results summary ===
+Active user-role grants: 4000 (target 4,000)
+Seeded SoD conflicts + orphaned grants caught: 28 / 28 (target 28 / 28)
+Named create+approve trade instruction scenario caught: True
+False positives over 4000 user-role pairs: 0 (target 0)
+Reference oracle exact match: True
+Evidence pack byte-identical across two regenerations: True
+Append-only invariant holds: True
